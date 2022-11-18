@@ -1,0 +1,10 @@
+#!/bin/sh
+# Convert a mistaken
+#   mv a b
+# to the intended
+#   git mv a b
+#
+# (Single file renames only)
+
+mv "$2" "$1"
+git mv "$1" "$2"
